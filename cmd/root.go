@@ -31,7 +31,7 @@ var (
     tagStr      string
     tags        []string
     notionDir   string
-    jkeyllDir   string
+    jekyllDir   string
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -46,7 +46,7 @@ var rootCmd = &cobra.Command{
         categories = strings.Split(categoryStr, ",")
         tags = strings.Split(tagStr, ",")
         
-        convert.Notion2Jkeyll(author, createdTime, notionDir, jkeyllDir, categories, tags)
+        convert.Notion2Jekyll(author, createdTime, notionDir, jekyllDir, categories, tags)
     },
 }
 
@@ -62,5 +62,5 @@ func init() {
     rootCmd.Flags().StringVarP(&categoryStr, "categories", "c", "", "categories split by ','")
     rootCmd.Flags().StringVarP(&tagStr, "tags", "t", "", "tags split by ',' and should be lower-case")
     rootCmd.Flags().StringVarP(&notionDir, "notiondir", "n", "./", "the dir of exported notion post")
-    rootCmd.Flags().StringVarP(&jkeyllDir, "jkeylldir", "j", "./", "the dir of created jkeyll post")
+    rootCmd.Flags().StringVarP(&jekyllDir, "jekylldir", "j", "./", "the dir of created jekyll post")
 }

@@ -1,4 +1,4 @@
-package jkeyll
+package jekyll
 
 import (
     "fmt"
