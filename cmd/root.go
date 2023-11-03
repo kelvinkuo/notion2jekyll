@@ -37,9 +37,11 @@ var (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
     Use:   "notion2jekyll",
-    Short: "Convert markdown file exported by notion  into jekyll project dir.",
-    Long: `examples:
-  notion2j
+    Short: "notion2jekyll converts markdown file exported by notion  into jekyll project dir.",
+    Long: `Convert markdown file exported by notion  into jekyll project dir.
+
+examples:
+  notion2jekyll -m "2023-01-25 15:04:05" -c 'device,nexus7' -t 'nexus7'
 `,
     
     Run: func(cmd *cobra.Command, args []string) {
